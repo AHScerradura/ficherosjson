@@ -76,7 +76,8 @@ async def ws_handler(websocket, path):
         while True:
             data = await websocket.recv()
 			#AHS para depuración
-		    print(data)
+		    #print(data)
+			print("Numero veces que paso por aqui")
             updateData(data)
 
     except Exception as e:
