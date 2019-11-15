@@ -75,21 +75,18 @@ async def ws_handler(websocket, path):
         data ='{"empty":"empty"}'
         while True:
             data = await websocket.recv()
-			#AHS para depuración
-		    #print(data)
-			#print("Numero veces que paso por aqui")
             updateData(data)
 
     except Exception as e:
         print(e)
     finally:
-        print("Sin errores")
+        print("")
 
 def _read_ready(self):
     if self._conn_lost:
         return
     try:
-        time.sleep(.10)
+        time.sleep(.30) #Original a 10... Lo pongo a 30
         data = self._sock.recv(self.max_size)
     except (BlockingIOError, InterruptedError):
         pass
