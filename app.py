@@ -75,9 +75,10 @@ async def ws_handler(websocket, path):
         data ='{"empty":"empty"}'
         while True:
             data = await websocket.recv()
+			#AHS para depuración
+		    print(data)
             updateData(data)
-		#AHS para depuración
-		print("Los datos recibidos son ->"+data)
+
     except Exception as e:
         print(e)
     finally:
