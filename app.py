@@ -76,7 +76,8 @@ async def ws_handler(websocket, path):
         while True:
             data = await websocket.recv()
             updateData(data)
-			print ("Los datos recibidos son ->"+data) #AHS para depuración
+			#AHS para depuración
+			print ("Los datos recibidos son ->"+data)
     except Exception as e:
         print(e)
     finally:
