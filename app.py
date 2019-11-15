@@ -83,7 +83,7 @@ async def ws_handler(websocket, path):
     except Exception as e:
         print(e)
     finally:
-        print("")
+        print("Sin errores")
 
 def _read_ready(self):
     if self._conn_lost:
