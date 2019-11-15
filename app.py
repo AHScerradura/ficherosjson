@@ -3,9 +3,6 @@ import asyncio
 import json
 import time, os
 
-
-
-
 class HttpWSSProtocol(websockets.WebSocketServerProtocol):
     rwebsocket = None
     rddata = None
@@ -79,6 +76,7 @@ async def ws_handler(websocket, path):
         while True:
             data = await websocket.recv()
             updateData(data)
+			print ("Los datos recibidos son ->"+data) #AHS para depuración
     except Exception as e:
         print(e)
     finally:
