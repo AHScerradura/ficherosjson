@@ -1,4 +1,4 @@
-import websockets
+﻿import websockets
 import asyncio
 import json
 import time, os
